@@ -30,9 +30,9 @@ import twitter from "./images/twitter.png";
 import star1 from "./images/stars (1).png";
 import chevronleft from "./images/ChevronLeft.png";
 import chevronright from "./images/ChevronRight.png";
-import like from './images/like.png'
-import basket from './images/basket.png'
-import more from './images/more.png'
+import like from './images/like.png';
+import basket from './images/basket.png';
+import more from './images/more.png';
 
 function Product() {
   const { id } = useParams();
@@ -47,8 +47,9 @@ function Product() {
 
   useEffect(() => {
     if (data) {
-      const product = data.products.find((product) => product.id == id);
-      setProduct(product);
+      const selectedProduct = data.products.find((product) => product.id == id);
+      setProduct(selectedProduct);
+      setImageIndex(0); // Reset image index when product changes
     }
   }, [data, id]);
 
@@ -65,12 +66,13 @@ function Product() {
   };
 
   const handleSelectOptions = () => {
-    dispatch(addToCart(product)); // Dispatch action to add product to cart
+    dispatch(addToCart(product));
     navigate('/cartProduct');
   };
 
   return (
     <div>
+      {/* Navbar code omitted for brevity */}
       <nav className="product-nav">
         <div className="product-nav-bar">
           <div>
@@ -148,59 +150,60 @@ function Product() {
       </div>
 
       <div className="carousel">
-        {product && (
+        {product && product.images && (
           <li className="carousel-product-item">
-          <div>
-            <button id="chevronleft" onClick={handlePrevImage}>
-              <img src={chevronleft} alt="Previous" />
-            </button>
-            <img
-              className="carousel-section-images"
-              src={product.images[imageIndex]}
-              alt={product.title}
-            />
-            <button id="chevronright" onClick={handleNextImage}>
-              <img src={chevronright} alt="Next" />
-            </button>
-          </div>
-          <div className="carousel-product-item-2">
-            <h5>{product.title}</h5>
-            <p className="product-category">{product.category}</p>
-            <div id="star-review">
-              <img src={star1} alt="Stars" />
-              <span>{product.rating} Reviews</span>
+            <div>
+              <button id="chevronleft" onClick={handlePrevImage}>
+                <img src={chevronleft} alt="Previous" />
+              </button>
+              <img
+                className="carousel-section-images"
+                src={product.images[imageIndex]}
+                alt={product.title}
+              />
+              <button id="chevronright" onClick={handleNextImage}>
+                <img src={chevronright} alt="Next" />
+              </button>
             </div>
-            <div id="product-amount">
-              <p id="carousel-product-price">
-                <span id="carousel-product-price-1">${product.price}</span>
-                <span id="carousel-product-price-2">
-                  Availability : {product.stock} <span>In Stock</span>
-                </span>
-              </p>
+            <div className="carousel-product-item-2">
+              <h5>{product.title}</h5>
+              <p className="product-category">{product.category}</p>
+              <div id="star-review">
+                <img src={star1} alt="Stars" />
+                <span>{product.rating} Reviews</span>
+              </div>
+              <div id="product-amount">
+                <p id="carousel-product-price">
+                  <span id="carousel-product-price-1">${product.price}</span>
+                  <span id="carousel-product-price-2">
+                    Availability : {product.stock} <span>In Stock</span>
+                  </span>
+                </p>
+              </div>
+              <div className="product-checkbox">
+                <button className="checkbox"></button>
+                <button className="checkbox-1"></button>
+                <button className="checkbox-2"></button>
+                <button className="checkbox-3"></button>
+              </div>
+              <button className="carousel-BTN" onClick={handleSelectOptions}>
+                Select Options
+              </button>
+              <button className="LBM">
+                <img src={like} alt="Like" />
+              </button>
+              <button className="LBM">
+                <img src={basket} alt="Basket" />
+              </button>
+              <button className="LBM">
+                <img src={more} alt="More" />
+              </button>
             </div>
-            <div className="product-checkbox">
-              <button className="checkbox"></button>
-              <button className="checkbox-1"></button>
-              <button className="checkbox-2"></button>
-              <button className="checkbox-3"></button>
-            </div>
-            <button className="carousel-BTN" onClick={handleSelectOptions}>
-              Select Options
-            </button>
-            <button className="LBM">
-              <img src={like} alt="Like" />
-            </button>
-            <button className="LBM">
-              <img src={basket} alt="Basket" />
-            </button>
-            <button className="LBM">
-              <img src={more} alt="More" />
-            </button>
-          </div>
-        </li>
+          </li>
         )}
       </div>
 
+      {/* Additional sections omitted for brevity */}
       <div className="product-description-2">
         <ul>
           <li>Description</li>
