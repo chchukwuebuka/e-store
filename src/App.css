@@ -683,6 +683,7 @@ section h5 {
   letter-spacing: 0.20000000298023224px;
   text-align: center;
   color: #23a6f0;
+  padding-left: 50px;
 }
 
 .better-experience h2 {
@@ -727,13 +728,13 @@ section h5 {
 }
 
 .better-experience button {
-  width: 302px;
+  width: 352px;
   height: Fixed 52px;
   padding: 15px 40px 15px 40px;
   gap: 10px;
   border-radius: 5px 0px 0px 0px;
   background: #23a6f0;
-  margin-left: 525px;
+  margin-left: 465px;
   margin-top: 30px;
 }
 
@@ -932,7 +933,6 @@ footer a {
       width: 200px;
       position: absolute;
       right: 270px;
-      background-color: #23a6f0;
       margin-right: 40px;
     }
 
@@ -1004,7 +1004,6 @@ footer a {
       gap: 30px;
       opacity: 0px;
       position: relative;
-      background-color: #23a6f0;
     }
 
     .mobile-menu ul {
@@ -1116,11 +1115,18 @@ footer a {
       font-size: 1em;
     }
 
-    .feature-products-1,
-    .feature-products {
+    .feature-products-1, .feature-products
+     {
       flex-direction: column;
-      width: 100%;
+      width: 250px;
       padding: 10px;
+      position: relative;
+      left: 5px;
+    }
+
+    .feature-products-1{
+      position: relative;
+      left: 5px;
     }
 
     .feature-products-1 h3,
@@ -1136,21 +1142,21 @@ footer a {
       width: 100%;
       padding: 20px;
     }
-
-    .inner-cards img {
-      position: relative;
-      left: 75px;
-    }
-
+/* 
     .inner-cards h3 {
       position: relative;
-      right: 50px;
-    }
+      right: 10px;
+    } */
 
     .inner-cards p {
       width: 250px;
       position: relative;
       right: 20px;
+    }
+
+    .container h6{
+      position: relative;
+      right: 70px;
     }
 
     .container h2 {
@@ -1162,11 +1168,15 @@ footer a {
       width: 239px;
       height: 100px;
       margin-left: 70px;
+      position: relative;
+      right: 70px;
     }
 
     .inner-container {
       flex-direction: column;
       width: 250px;
+      position: relative;
+      right: 90px;
     }
 
     .inner-container-1 img {
@@ -1209,30 +1219,60 @@ footer a {
       flex-direction: column;
       align-items: center;
       padding: 20px;
-      width: 100%;
+      width: 252px;
       margin-top: 20px;
       margin-top: 1200px;
       position: relative;
-   
     }
 
-    .testimonial h3{
-font-size: 22px;
-font-weight: 400;
-line-height: 16px;
-letter-spacing: 0.20000000298023224px;
-text-align: left;
-width: 181px;
-height: 64px;
-gap: 0px;
-opacity: 0px;
-
+    .testimonial h3 {
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 16px;
+      letter-spacing: 0.20000000298023224px;
+      text-align: left;
+      width: 181px;
+      height: 64px;
+      margin-left: 40px;
     }
+
+    #testi-image {
+      width: 90px;
+      height: 90px;
+      gap: 0px;
+      border: 1.8px 0px 0px 0px;
+      position: relative;
+      right: 85px;
+      bottom: 40px;
+    }
+
     .testimonial h6,
     #regina,
     #des {
       font-size: 1.2em;
       text-align: center;
+      width: 258px;
+      height: 72px;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 24px;
+      letter-spacing: 0.20000000298023224px;
+    }
+
+    #des {
+      position: relative;
+      bottom: 40px;
+    }
+
+    .tiastimonial-images {
+      width: 220px;
+      margin-left: 20px;
+      position: relative;
+      bottom: 40px;
+    }
+
+    .tiastimonial-images-1 {
+      width: 70px;
     }
 
     .better-experience {
@@ -1240,17 +1280,66 @@ opacity: 0px;
       text-align: center;
       background-size: cover;
       background-position: center;
+
+      width: 280px;
+      height: 512px;
+      gap: 40px;
+      opacity: 0px;
     }
 
     .better-experience h2,
     .better-experience h3,
     .better-experience p {
       font-size: 1.5em;
+      width: 258px;
+      height: 200px;
+      position: relative;
+      right: 420px;
+      bottom: 90px;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 50px;
+      letter-spacing: 0.20000000298023224px;
+      text-align: center;
+    }
+
+    .better-experience h6 {
+      position: relative;
+      bottom: 100px;
+    }
+
+    .better-experience h3 {
+      position: relative;
+      bottom: 90px;
+      right: 450px;
+    }
+
+    .better-experience p {
+      width: 208px;
+      height: 60px;
+      position: relative;
+      bottom: 90px;
+      right: 450px;
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 20px;
+      letter-spacing: 0.20000000298023224px;
+      text-align: center;
     }
 
     .better-experience button {
-      width: 100%;
+      width: 270px;
       font-size: 1em;
+      position: relative;
+      bottom: 270px;
+      right: 540px;
+      height: 52px;
+      gap: 10px;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 22px;
+      letter-spacing: 0.20000000298023224px;
+      text-align: center;
     }
 
     .bandage {
@@ -1258,6 +1347,8 @@ opacity: 0px;
       align-items: center;
       padding: 20px;
       width: 100%;
+      position: relative;
+      right: 140px;
     }
 
     .bandage h3 {
@@ -1267,41 +1358,63 @@ opacity: 0px;
 
     .bandage img {
       margin-top: 10px;
+      margin-right: 10px;
     }
 
     footer {
       padding: 20px;
       text-align: center;
+      width: 255px;
     }
 
     .inner-footer {
       flex-direction: column;
       align-items: center;
       padding: 20px;
+      position: relative;
+      right: 300px;
     }
 
-    footer h5,
-    footer a {
-      font-size: 1em;
+    .inner-footer-1{
+      position: relative;
+      left: 195px;
+      bottom: 40px;
+    }
+
+    .inner-footer-1 h5{
+      position: relative;
+      top: 20px;
     }
 
     .input-group {
-      flex-direction: column;
+      width: 200px;
+      height: 50px;
     }
 
     .input-field {
-      width: 100%;
+      width: 120px;
       padding: 10px;
-    }
+      height: 50px;
+    } 
 
     .subscribe-btn {
-      width: 100%;
+      width: 70px;
+      height: 50px;
       margin-top: 10px;
+      font-size: 5px;
     }
 
     #last-footer {
       padding: 20px;
       text-align: center;
+      position: relative;
+      top: 400px;
+      margin-top: 100px;
+      font-size: 12px;
+      padding: 5px;
+      width: 200px;
+      padding-top: 25px;
+      background-color: transparent;
     }
 
     #learn-more h6,
@@ -1328,16 +1441,18 @@ opacity: 0px;
 
     .view-more-btn {
       position: absolute;
-      left: 10px;
-      top: 6150px;
+      left: 0px;
+      top: 6350px;
+      right: 400px;
       width: 280px;
       margin-left: 130px;
     }
 
     .mobile-feature-product {
       font-size: small;
-      width: 280px;
-      margin-left: 112px;
+      width: 220px;
+      position: relative;
+      left: 5px;
     }
   }
 }

@@ -419,15 +419,15 @@ function Landing() {
           <p id="des">Designer</p>
         </div>
         <div className="tiastimonial-images">
-          <img src={camera} alt="" />
-          <img src={lady} alt="" />
-          <img src={street} alt="" />
-          <img src={icecream} alt="" />
-          <img src={Blady} alt="" />
-          <img src={writing} alt="" />
-          <img src={mountain} alt="" />
-          <img src={snow} alt="" />
-          <img src={blue} alt="" />
+          <img  className="tiastimonial-images-1" src={camera} alt="" />
+          <img className="tiastimonial-images-1" src={lady} alt="" />
+          <img className="tiastimonial-images-1" src={street} alt="" />
+          <img className="tiastimonial-images-1" src={icecream} alt="" />
+          <img className="tiastimonial-images-1" src={Blady} alt="" />
+          <img className="tiastimonial-images-1" src={writing} alt="" />
+          <img className="tiastimonial-images-1" src={mountain} alt="" />
+          <img className="tiastimonial-images-1" src={snow} alt="" />
+          <img className="tiastimonial-images-1" src={blue} alt="" />
         </div>
         <div></div>
       </div>
